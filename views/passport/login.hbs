@@ -1,3 +1,14 @@
-<form action="">
-  
+<h2>Login</h2>
+
+<form action="" method="POST" class="form-container">
+  <input type="text" name="email" placeholder="Email">
+  <input type="password" name="password" placeholder="Password">
+
+  {{#if message}}
+    <div class="error-message">{{ message }}</div>
+  {{/if}}
+  <br><br>
+
+  <button id="signup-button">Login!</button>
+
 </form>
