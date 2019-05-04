@@ -1,8 +1,80 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  }
+body{
+  font-family: 'Roboto', sans-serif;
+}
+.container nav.desk,
+.container nav.mob{
+  width: 100%;
+  background: #364a4b;
+  height: 60px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+nav.desk ul{
+  list-style: none;
+  width: 75%;
+  height: 60px;
+  margin: 0 auto;
 }
 
-a {
-  color: #00B7FF;
+nav.desk ul li{
+  width: 20%;
+  float: left;
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+nav ul li:hover{
+  background: #a3ada5;
+}
+
+nav ul li.active{
+  background: #a3ada5;
+}
+nav ul li a{
+  color: #fff;
+  text-decoration: none;
+}
+nav.mob,
+.hamburger-btn{
+  display: none;
+}
+@media screen and (max-width: 700px){
+  nav.desk{
+    display: none;
+  }
+  nav.mob,
+  .hamburger-btn{
+    display: block;
+  }
+  .hamburger-btn{
+    position: relative;
+  }
+  .hamburger-btn .fa-align-justify,
+  .hamburger-btn .fa-times-circle{
+     position: fixed;
+     right: 25px;
+     top: 15px;
+     font-size: 35px;
+     color: #fff;
+     cursor: pointer;
+  }
+  .mob ul{
+    margin-top: 60px;
+    background: #364a4b;
+  }
+  .mob li{
+    text-align:center;
+    padding: 20px;
+    cursor: pointer;
+  }
 }
