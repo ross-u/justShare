@@ -97,7 +97,7 @@ a {
 
 nav {
   height: 7vh;
-  background-color:rgb(6, 204, 181);
+  background-color:rgb(5, 223, 197);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -140,7 +140,8 @@ main {
   justify-content: center;
   align-items: center;
   /* background: linear-gradient(rgba(35, 119, 91, 0.472), rgba(15, 41, 47, 0.512)), url('../images/alexandr-podvalny-221880-unsplash.jpg') center / cover no-repeat; */
-  background: linear-gradient(rgba(34, 2, 70, 0.472), rgba(13, 0, 24, 0.512)), url('../images/alexandr-podvalny-221880-unsplash.jpg') center / cover no-repeat;
+  /* background: linear-gradient(rgba(34, 2, 70, 0.472), rgba(13, 0, 24, 0.512)), url('../images/bread.jpg') center / cover no-repeat; */
+  background: linear-gradient(rgba(2, 2, 0, 0.437), rgba(15, 19, 0, 0.401)), url('../images/bread.jpg') center / cover no-repeat;
 }
 
 .main-header {
@@ -158,7 +159,7 @@ main {
   display: inline-block;
   padding: 15px;
   width: 70px;
-  background-color: rgb(6, 204, 181);
+  background-color: rgb(5, 223, 197);
   border-radius: 15px;
   margin: 0 15px;
 }
@@ -169,7 +170,7 @@ main {
   height: 93vh;
   background: pink;
   padding-top: 20px;
-  background: linear-gradient(rgba(34, 2, 70, 0.472), rgba(13, 0, 24, 0.512)), url('../images/josh-wilburne-501948-unsplash.jpg') center / cover no-repeat ;
+  background: linear-gradient(rgba(34, 2, 70, 0.472), rgba(13, 0, 24, 0.512)), url('../images/josefin-1272706-unsplash.jpg') center / cover no-repeat ;
 }
 
 .form-container {
