@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 
 /* *{
+=======
+/* 
+*{
+>>>>>>> eac0763f82c2afc0d31fe629b9310d8196033fdc
   margin: 0;
   padding: 0;
   user-select: none;
@@ -78,6 +83,10 @@ nav.mob,
     cursor: pointer;
   }
 } */
+<<<<<<< HEAD
+=======
+
+>>>>>>> eac0763f82c2afc0d31fe629b9310d8196033fdc
 html {
   font-size: 18px;
 }
@@ -161,4 +170,8 @@ main {
   background-color: rgb(6, 204, 181);
   border-radius: 15px;
   margin: 0 15px;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> eac0763f82c2afc0d31fe629b9310d8196033fdc
