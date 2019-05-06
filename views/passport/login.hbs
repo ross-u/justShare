@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <form action="/login" method="POST">
   <div>
     <label for="username">Username:</label>
@@ -15,5 +16,24 @@
   <div>
     <input type="submit" value="Log In">
   </div>
+=======
+
+
+<section class="login-page">
+  <section class="form-container">
+<h2>Login</h2>
+
+<form action="" method="POST">
+  <input type="text" name="email" placeholder="Email">
+  <input type="password" name="password" placeholder="Password">
+
+  {{#if message}}
+    <div class="error-message">{{ message }}</div>
+  {{/if}}
+
+  <button id="signup-button">Login!</button>
+>>>>>>> 13183e9153117d8d272f09f149f5e721a8b56817
 
 </form>
+  </section>
+</section>
