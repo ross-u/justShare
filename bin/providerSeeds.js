@@ -5,65 +5,75 @@ const dbName = 'providerData';
 mongoose.connect(`mongodb://localhost/${dbName}`);
 
 const shop = [
-  { establishmentName: 'De Pa i Xocolata',
+  { establishmentName: 'De Pa Xocolata',
     address: {
-      street: 'Carrer de la Marina,92',
+      street: 'Carrer de la Marina,888',
       city: 'Barcelona',
       neighborhood: 'Poblenou'
     },
     contact: {
       email: null,
-      phone: '933208149'
+      phone: '911111'
     },
-    password: '933208149'
+    product: [],
+    password: '911111',
+    picture: ' '
   },
-  { establishmentName: 'SKYE Coffee Co.',
+  { establishmentName: 'SKI Coffee',
     address: {
-      street: 'Career de Pamplona, 88',
+      street: 'Career de Pamplona, 777',
       city: 'Barcelona',
       neighborhood: 'Poblenou'
     },
     contact: {
       email: null,
-      phone: null
+      phone: 922222
     },
-    password: 'skye-coffee'
+    product: [],
+    password: '922222',
+    picture: ' '
   },
-  { establishmentName: 'Sonora Sport Tavern',
+  { establishmentName: 'Sport Bar',
     address: {
-      street: 'Career de Pamplona, 96',
+      street: 'Career de Pamplona, 999',
       city: 'Barcelona',
       neighborhood: 'Poblenou'
     },
     contact: {
       email: null,
-      phone: '933003369'
+      phone: '933333'
     },
-    password: '933003369'
+    product: [],
+    password: '933333',
+    picture: ' '
   },
-  { establishmentName: 'All you eat is love',
+  { establishmentName: 'All you love is eat',
     address: {
-      street: 'Carrer de la Marina, 52',
+      street: 'Carrer de la Marina, 555',
       city: 'Barcelona',
       neighborhood: 'Vila Olimpica'
     },
     contact: {
       email: null,
-      phone: '931583974'
+      phone: '944444'
     },
-    password: '931583974'
+    product: [],
+    password: '944444',
+    picture: ' '
   },
-  { establishmentName: 'Teng Sushi',
+  { establishmentName: 'Yummy Sushi',
     address: {
-      street: 'Avinguda Diagonal, 151',
+      street: 'Avinguda Diagonal, 1111',
       city: 'Barcelona',
       neighborhood: 'Poblenou'
     },
     contact: {
       email: null,
-      phone: '93122475'
+      phone: '955555'
     },
-    password: '931224750'
+    product: [],
+    password: '955555',
+    picture: ' '
   }
 
 ];

@@ -12,6 +12,7 @@ const providerSchema = new Schema({
     email: String,
     phone: Number
   },
+  product: [],
   password: String
 }, {
   timestamps: {
