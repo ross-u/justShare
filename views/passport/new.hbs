@@ -1,8 +1,11 @@
 
 <h1>Add a new Products</h1>
-<form action="/product/new" method="POST">
+<form action="/product/new" enctype="multipart/form-data" method="POST">
   <label for="name">name</label>
   <input type="text" name="name" id="name">
+
+  <label for="image">image</label>
+  <input type="text" name="image" id="image">
 
   <label for="description">description</label>
   <input type="text" name="description" id="description">
