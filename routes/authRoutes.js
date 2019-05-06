@@ -9,7 +9,7 @@ const checkIfAuthenticated = (req, res, next) => {
 };
 
 // User model
-const User = require('../models/providerModel');
+const User = require('../models/user');
 
 // Bcrypt to encrypt passwords
 const bcrypt = require('bcrypt');
@@ -22,8 +22,8 @@ router.get('/logout', (req, res) => {
 });
 
 // GET  '/profile'
-router.get('/profile', checkIfAuthenticated, (req, res, next) => {
-  res.render('passport/profile', { user: req.user });
+router.get('/profile-page', checkIfAuthenticated, (req, res, next) => {
+  res.render('profile', { user: req.user });
 });
 
 // GET  '/login'
@@ -33,7 +33,7 @@ router.get('/login', (req, res, next) => {
 
 // POST  '/login'
 router.post('/login', passport.authenticate('local', {
-  successRedirect: '/',
+  successRedirect: '/profile-page',
   failureRedirect: '/login',
   passReqToCallback: true
 }));

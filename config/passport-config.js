@@ -1,6 +1,6 @@
 // Passport Setup
 const passport = require('passport');
-const User = require('./../models/providerModel');
+const User = require('../models/user');
 
 // serializeUser:
 passport.serializeUser((userObj, done) => {
