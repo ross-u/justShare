@@ -11,7 +11,7 @@ router.get('/signup', (req, res, next) => {
 
 //* ********************* LOGIN *****************************//
 
-// GET  '/login'
+// get the login form
 router.get('/login', (req, res, next) => {
   res.render('passport/login');
 });
