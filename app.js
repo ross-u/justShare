@@ -5,6 +5,13 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 
+// Mongoose connection
+mongoose.connect(`mongodb://localhost/providerData`, {
+  keepAlive: true,
+  useNewUrlParser: true,
+  reconnectTries: Number.MAX_VALUE
+});
+
 const router = require('./routes/index');
 const passportRouter = require('./routes/passportRouter');
 
