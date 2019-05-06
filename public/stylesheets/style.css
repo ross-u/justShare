@@ -1,8 +1,208 @@
+/* 
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  }
+body{
+  font-family: 'Roboto', sans-serif;
+}
+.container nav.desk,
+.container nav.mob{
+  width: 100%;
+  background: #364a4b;
+  height: 60px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+nav.desk ul{
+  list-style: none;
+  width: 75%;
+  height: 60px;
+  margin: 0 auto;
+}
+
+nav.desk ul li{
+  width: 20%;
+  float: left;
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+nav ul li:hover{
+  background: #a3ada5;
+}
+
+nav ul li.active{
+  background: #a3ada5;
+}
+nav ul li a{
+  color: #fff;
+  text-decoration: none;
+}
+nav.mob,
+.hamburger-btn{
+  display: none;
+}
+@media screen and (max-width: 700px){
+  nav.desk{
+    display: none;
+  }
+  nav.mob,
+  .hamburger-btn{
+    display: block;
+  }
+  .hamburger-btn{
+    position: relative;
+  }
+  .hamburger-btn .fa-align-justify,
+  .hamburger-btn .fa-times-circle{
+     position: fixed;
+     right: 25px;
+     top: 15px;
+     font-size: 35px;
+     color: #fff;
+     cursor: pointer;
+  }
+  .mob ul{
+    margin-top: 60px;
+    background: #364a4b;
+  }
+  .mob li{
+    text-align:center;
+    padding: 20px;
+    cursor: pointer;
+  }
+} */
+html {
+  font-size: 18px;
+}
+
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+/**************************** NAVBAR *****************************/
+
+nav {
+  height: 7vh;
+  background-color:rgb(5, 223, 197);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#nav-brand-container {
+  display: flex;
+  align-items: center;
+}
+
+#nav-logo {
+  height: 5vh;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+#nav-brand {
+  color: white;
+  font-family: 'Pacifico', cursive;
+  font-size: 1rem;
+}
+
+#nav-links {
+  padding-right: 20px;
+}
+
+#nav-links a {
+  text-decoration: none;
+  color: white;
+  padding-left: 10px;
+}
+
+/************* HOMEPAGE **************/
+
+main {
+  color: white;
+  height: 93vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background: linear-gradient(rgba(35, 119, 91, 0.472), rgba(15, 41, 47, 0.512)), url('../images/alexandr-podvalny-221880-unsplash.jpg') center / cover no-repeat; */
+  /* background: linear-gradient(rgba(34, 2, 70, 0.472), rgba(13, 0, 24, 0.512)), url('../images/bread.jpg') center / cover no-repeat; */
+  background: linear-gradient(rgba(2, 2, 0, 0.437), rgba(15, 19, 0, 0.401)), url('../images/bread.jpg') center / cover no-repeat;
+}
+
+.main-header {
+  font-size: 5rem;
+  color: rgb(255, 255, 255);
+  font-family: 'Pacifico', cursive;
+  font-weight: 100;
+  margin-bottom: 0;
+}
+
+.button {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  padding: 15px;
+  width: 70px;
+  background-color: rgb(5, 223, 197);
+  border-radius: 15px;
+  margin: 0 15px;
+}
+
+/************* FORMS **************/
+
+.signup-page {
+  height: 93vh;
+  background: linear-gradient(rgba(22, 22, 22, 0.5), rgba(66, 66, 66, 0.5)),url('../images/markus-spiske-139525-unsplash.jpg') center / cover no-repeat ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  border-radius: 15px;
+  padding: 15px 30px 30px 30px;
+  color: white;
+  width: 65vw;
+  height: 500px;
+  max-width: 600px;
+  border: 3px solid rgb(5, 223, 197);
+  background: rgba(5, 223, 197, .9); 
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+form input {
+  height: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+form button {
+  height: 30px;
+  border-radius: 15px;
+}
+
+form p {
+  margin-top: 30px;
 }

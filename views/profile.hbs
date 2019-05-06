@@ -1,0 +1,37 @@
+<h1>{{user.username}}</h1>
+
+<h4>List all your products</h4>
+
+<br>
+
+<div>
+  {{#if user}}
+  <h3>user.req :</h3>
+    <p>{{user}}</p>
+  {{/if}}
+</div>
+
+<a href="/">
+  <button>Home</button>
+</a>
+
+<a href="/logout">
+  <button>Logout</button>
+</a>
+
+<a href="/product/new">
+<button>List new product</button>
+</a>
+
+<h1>Listed Products</h1>
+{{#each allProductsFromDB}}
+  <p><a href="/products/{{this.id}}">{{this.name}}</a></p>
+  <a href="products/edit">
+<button>Edit Product</button>
+</a>
+<a href="products/delete">
+<button>Delete product</button>
+</a>
+{{/each}}
+
+
