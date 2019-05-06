@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-<form action="/login" method="POST">
-  <div>
-    <label for="username">Username:</label>
-    <input type="text" name="username">
-  </div>
-  <div>
-    <label for="password">Password:</label>
-    <input type="password" name="password">
-  </div>
-    
-    {{#if message}}
-      <div class="error-message">{{ message }}</div>
-    {{/if}}
-  
-  <div>
-    <input type="submit" value="Log In">
-  </div>
-=======
 
 
 <section class="login-page">
@@ -24,7 +5,7 @@
 <h2>Login</h2>
 
 <form action="" method="POST">
-  <input type="text" name="email" placeholder="Email">
+  <input type="text" name="username" placeholder="username">
   <input type="password" name="password" placeholder="Password">
 
   {{#if message}}
@@ -32,7 +13,6 @@
   {{/if}}
 
   <button id="signup-button">Login!</button>
->>>>>>> 13183e9153117d8d272f09f149f5e721a8b56817
 
 </form>
   </section>
