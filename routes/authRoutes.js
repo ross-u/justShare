@@ -28,37 +28,10 @@ router.get('/profile', checkIfAuthenticated, (req, res, next) => {
 
   Product.find({user: req.user._id })
     .then((allProductsFromDB) => {
-      console.log('allProductsFromDB', allProductsFromDB);
-  
       res.render('profile', { user: req.user, allProductsFromDB });
     })
     .catch((err) => console.log('error', err));
 });
-
-// router.get('/profile', checkIfAuthenticated, (req, res, next) => {
-//   res.render('profile', { user: req.user });
-//   const {id} = req.params;
-//   Product.find({user: id})
-//     .then(products => res.send(products))
-//     .catch(err => console.log(err))
-
-// router.get(‘/details/:bookId’, (req, res, next) => {
-//  console.log(req.params);
-//  const {bookId} = req.params;
-//  Book.findById(bookId)
-//    // the author object with the ID with be pulled from the DB
-//    .populate(‘author’)
-//    .then(book => res.render(‘book-details’, {book}))
-//    .catch(error => console.log(error));
-// })
-
-/* GET /books */
-// router.get('/', (req, res, next) => {
-//  Book.find({})
-//    // pass the data to our books file in the form of an object!
-//    .then((allTheBooksFromDB) => res.render(‘books’, {allTheBooksFromDB}))
-//    .catch((error) => {console.log(error)});
-// })
 
 // GET  '/login'
 router.get('/login', (req, res, next) => {
