@@ -41,11 +41,12 @@ nav {
 #nav-brand {
   color: white;
   font-family: 'Pacifico', cursive;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 #nav-links {
   padding-right: 20px;
+  font-size: 1rem;
 }
 
 #nav-links a {
@@ -61,14 +62,12 @@ main {
   height: 93vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  /* background: linear-gradient(rgba(35, 119, 91, 0.472), rgba(15, 41, 47, 0.512)), url('../images/alexandr-podvalny-221880-unsplash.jpg') center / cover no-repeat; */
-  /* background: linear-gradient(rgba(34, 2, 70, 0.472), rgba(13, 0, 24, 0.512)), url('../images/bread.jpg') center / cover no-repeat; */
   background: linear-gradient(rgba(2, 2, 0, 0.437), rgba(15, 19, 0, 0.401)), url('../images/bread.jpg') center / cover no-repeat;
 }
 
 .main-content {
+  margin-top: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,16 +81,22 @@ main {
   margin-bottom: 0;
 }
 
+main .button-container {
+  margin-top: 20px;
+}
+
 .button {
   color: white;
   text-decoration: none;
   text-align: center;
   display: inline-block;
-  padding: 15px;
+  padding: 25px;
   width: 70px;
   background-color: rgb(5, 223, 197);
   border-radius: 15px;
   margin: 0 15px;
+  width: 125px;
+  font-size: 1rem;
 }
 
 /*********************** SIGNUP ************************/
@@ -104,12 +109,12 @@ main {
   align-items: center;
 }
 
-.form-container {
+.signup-page .form-container {
   border-radius: 15px;
   padding: 15px 30px 30px 30px;
   color: white;
   width: 65vw;
-  height: 460px;
+  height: 490px;
   max-width: 600px;
   border: 3px solid rgb(5, 223, 197);
   background: rgba(5, 223, 197, .9); 
@@ -118,7 +123,7 @@ main {
 form {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  /* margin-top: 30px; */
 }
 
 form input {
@@ -146,7 +151,32 @@ form p {
 
 /*********************** LOGIN ************************/
 
-.showProducts{
+.login-page .form-container {
+  border-radius: 15px;
+  padding: 15px 30px 30px 30px;
+  color: white;
+  width: 65vw;
+  height: 490px;
+  max-width: 600px;
+  border: 3px solid rgb(5, 223, 197);
+  background: rgba(5, 223, 197, .9); 
+}
+
+.login-page {
+  height: 93vh;
+  background: linear-gradient(rgba(22, 22, 22, 0.5), rgba(66, 66, 66, 0.5)),url('../images/lettuce.jpg') center / cover no-repeat ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.login-page .form-container {
+  height: 225px;
+}
+
+/* .showProducts{
   background:linear-gradient(rgba(2, 2, 0, 0.5), rgba(15, 19, 0, 0.401)), url('../images/bread.jpg') center / cover no-repeat;
   height: 100%;
   display: flex;
@@ -221,9 +251,20 @@ h2 {
 }
 .showProducts .button-container{
   margin-bottom: 10px;
-}
+} */
 
 /******************* ADD NEW ITEM ********************/
+
+.new-page .form-container {
+  border-radius: 15px;
+  padding: 15px 30px 30px 30px;
+  color: white;
+  width: 65vw;
+  height: 490px;
+  max-width: 600px;
+  border: 3px solid rgb(5, 223, 197);
+  background: rgba(5, 223, 197, .9); 
+}
 
 .new-page {
   height: 93vh;
@@ -293,7 +334,7 @@ h2 {
   min-width: 300px; 
   display: flex;
   flex-direction: column;
-  margin: 10px;
+  margin-bottom: 20px;
   padding: 10px;
   text-align: center;
 }
@@ -317,7 +358,7 @@ h2 {
 
 .profile-button {
   padding: 15px 0;
-  width: 70px;
+  width: 120px;
   color: white;
   text-decoration: none;
   text-align: center;
@@ -349,8 +390,36 @@ h2 {
 /********************* MEDIA QUERIES **********************/
 
 @media(max-width:767px){
+  #nav-brand {
+    font-size: .75rem;
+  }
+  
+  #nav-links {
+    font-size: .75rem;
+  }
 
+  .main-header {
+    font-size: 4rem;
+  }
+
+  .button {
+    margin-bottom: 15px;
+  }
+
+  .main-content {
+    margin-top: 100px;
+  }
+
+  main .button-container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
+  
 }
+
+
+
 
 @media(min-width:768px){
 
