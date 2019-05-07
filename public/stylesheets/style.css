@@ -141,4 +141,40 @@ form p {
   height: 225px;
 }
 
-/********************************* LOGIN **********************************/
+/********************************* PROFILE **********************************/
+
+.profile-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.profile-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: rgba(221, 219, 219, 0.219)
+}
+
+.item {
+  border: 1px solid pink;
+  width: 30%;
+  min-width: 300px; 
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-products-heading {
+  text-align: center;
+}
+
+.product-image {
+  width: 90%;
+  height: 200px;
+}
