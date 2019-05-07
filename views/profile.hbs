@@ -12,6 +12,7 @@
 <h1>Listed Products</h1>
 {{#each allProductsFromDB}}
   <p>{{this.name}}</p>
+  <img src="{{this.image}}" alt="">
   <p>{{this.description}}</p>
   <p>{{this.allergens}}</p>
   <p>{{this._id}}</p>
