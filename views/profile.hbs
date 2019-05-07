@@ -1,22 +1,25 @@
-<h1>PROFILE: {{user.username}}</h1>
+<section class="profile-page">
+  <div class="profile-info">
+    <h1>Welcome, {{user.username}}!</h1>
+    <a class="new-button button" href="/product/new">Add New Product</a>
+  </div>
+  
+  <div class="profile-products">
+    <h1>View Your Listed Products</h1>
+    {{#each allProductsFromDB}}
+      <p>{{this.name}}</p>
+      <img src="{{this.image}}" alt="">
+      <p>{{this.description}}</p>
+      <p>{{this.allergens}}</p>
+      <a href="products/edit"><button>Edit</button></a>
+      <a href="products/delete"><button>Delete</button></a>
+    {{/each}}
+  </div>
+  
 
-<h2>List all your products</h2>
-
-<br>
+</section>
 
 
 
-<a href="/logout"><button>Logout</button></a>
-<a href="/product/new"><button>List new product</button></a>
-
-<h1>Listed Products</h1>
-{{#each allProductsFromDB}}
-  <p>{{this.name}}</p>
-  <img src="{{this.image}}" alt="">
-  <p>{{this.description}}</p>
-  <p>{{this.allergens}}</p>
-  <a href="products/edit"><button>Edit</button></a>
-  <a href="products/delete"><button>Delete</button></a>
-{{/each}}
 
 
