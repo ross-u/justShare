@@ -1,7 +1,7 @@
 <h2>All Products</h2>
 {{#each allProductsFromDB}}
-  {{this.name}}
-  {{this.description}}
-  {{this.allergens}}
-  {{this.location}}
+  <h2>{{this.name}}</h2>
+  <h3>{{this.description}}</h3>
+  <p>Allegens: {{this.allergens}}</p>
+  <p>Location: {{this.location}}</p>
 {{/each}}
