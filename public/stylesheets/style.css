@@ -13,11 +13,14 @@ a {
   color: #00B7FF;
 }
 
-/************************************* NAVBAR **************************************/
+/************************ NAVBAR *************************/
 
 nav {
   height: 7vh;
+  min-height: 40px;
   background-color:rgb(5, 223, 197);
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,6 +33,7 @@ nav {
 
 #nav-logo {
   height: 5vh;
+  min-height: 30px;
   padding-right: 20px;
   padding-left: 20px;
 }
@@ -50,7 +54,7 @@ nav {
   padding-left: 10px;
 }
 
-/*********************************** HOMEPAGE ***********************************/
+/************************ HOMEPAGE ************************/
 
 main {
   color: white;
@@ -64,8 +68,14 @@ main {
   background: linear-gradient(rgba(2, 2, 0, 0.437), rgba(15, 19, 0, 0.401)), url('../images/bread.jpg') center / cover no-repeat;
 }
 
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .main-header {
-  font-size: 5rem;
+  font-size: 6rem;
   color: rgb(255, 255, 255);
   font-family: 'Pacifico', cursive;
   font-weight: 100;
@@ -84,7 +94,7 @@ main {
   margin: 0 15px;
 }
 
-/********************************* SIGNUP **********************************/
+/*********************** SIGNUP ************************/
 
 .signup-page {
   height: 93vh;
@@ -112,22 +122,29 @@ form {
 }
 
 form input {
+  margin-top: 10px;
   height: 30px;
   margin-bottom: 10px;
   text-align: center;
   text-transform: uppercase;
 }
 
-form button {
-  height: 30px;
+.form-button {
+  height: 40px;
   border-radius: 15px;
+  background-color: rgba(231, 216, 240, 0.712);
+  box-shadow: 2px 2px 2px rgb(4, 209, 175);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  margin-top: 10px;
 }
 
 form p {
   margin-top: 30px;
 }
 
-/********************************* LOGIN **********************************/
+/*********************** LOGIN ************************/
 
 .login-page {
   height: 93vh;
@@ -141,11 +158,44 @@ form p {
   height: 225px;
 }
 
-/********************************* PROFILE **********************************/
+/******************* ADD NEW ITEM ********************/
+
+.new-page {
+  height: 93vh;
+  background: linear-gradient(rgba(22, 22, 22, 0.5), rgba(66, 66, 66, 0.5)),url('../images/lettuce.jpg') center / cover no-repeat ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-page .form-container {
+  height: 420px;
+}
+
+/********************** PROFILE ***********************/
+
+.welcome-message {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.new-button {
+  font-size: 1rem;
+  width: 180px;
+  padding: 30px 40px;
+  background-color: rgb(241, 128, 41);
+}
 
 .profile-page {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  min-height: 93vh;
+}
+
+.profile-page h3 {
+  margin: 4px 0;
+  font-size: 1.5rem;
 }
 
 .profile-info {
@@ -153,21 +203,34 @@ form p {
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
+  /* height: 300px */
+
+  padding-bottom: 80px;
+}
+
+.profile-products-container {
+  background: rgba(221, 219, 219, 0.198);
+  /* margin-top: 80px; */
+  padding-top: 20px;
 }
 
 .profile-products {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background: rgba(221, 219, 219, 0.219)
+  padding: 0 10px;
 }
 
 .item {
-  border: 1px solid pink;
+  border: 1px solid rgb(241, 128, 41);
   width: 30%;
+  box-sizing: border-box;
   min-width: 300px; 
   display: flex;
   flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
 }
 
 .profile-products-heading {
@@ -175,6 +238,63 @@ form p {
 }
 
 .product-image {
-  width: 90%;
+  width: 95%;
   height: 200px;
+  margin: 0 auto;
+}
+
+.profile-button-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0 5px;
+  /* border-top: 1px solid black; */
+}
+
+.profile-button {
+  padding: 15px 0;
+  width: 70px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.edit-button {
+  background-color: #05DFC5
+}
+
+.delete-button {
+  background-color: #00AADD
+}
+
+/********************* EDIT FORM **********************/
+
+.edit-page {
+  height: 93vh;
+  background: linear-gradient(rgba(22, 22, 22, 0.5), rgba(66, 66, 66, 0.5)),url('../images/markus-spiske-139525-unsplash.jpg') center / cover no-repeat ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-page .form-container {
+  height: 425px;
+}
+
+/********************* MEDIA QUERIES **********************/
+
+@media(max-width:767px){
+
+}
+
+@media(min-width:768px){
+
+}
+
+@media(min-width:992px){
+
+}
+
+@media(min-width:1200px){
+
 }

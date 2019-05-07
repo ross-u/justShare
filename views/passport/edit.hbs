@@ -1,16 +1,21 @@
-<h1>Edit Product</h1>
-<form action="/product/edit?product_id={{product._id}}" method="POST">
-  <label for="">name</label>
-  <input type="text" name="name" value="{{product.name}}">
+<section class="edit-page">
+  <section class="form-container">
+    <h1>Edit Product</h1>
+    <form action="/product/edit?product_id={{product._id}}" method="POST">
+      <label for="">name</label>
+      <input type="text" name="name" value="{{product.name}}">
 
-  <label for="">description</label>
-  <input type="text" name="description" value="{{product.description}}">
+      <label for="">description</label>
+      <input type="text" name="description" value="{{product.description}}">
 
-  <label for="">allergens</label>
-  <input type="text" name="allergens" value="{{product.allergens}}">
+      <label for="">allergens</label>
+      <input type="text" name="allergens" value="{{product.allergens}}">
 
-  <label for="">location</label>
-  <input type="text" name="location" value="{{product.location}}">
+      <label for="">location</label>
+      <input type="text" name="location" value="{{product.location}}">
 
-  <button type="submit">Edit product</button>
-</form>
+      <button class="form-button" type="submit">Edit product</button>
+    </form>
+  </section>
+</section>
+

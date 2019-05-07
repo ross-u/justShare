@@ -1,21 +1,31 @@
 <section class="profile-page">
   <div class="profile-info">
-    <h1>Welcome, {{user.username}}!</h1>
+    <h1 class="welcome-message">Welcome, {{user.username}}!</h1>
     <a class="new-button button" href="/product/new">Add New Product</a>
   </div>
   
-  <h1 class="profile-products-heading">View Your Listed Products</h1>
-  <div class="profile-products">
-    <h1>View Your Listed Products</h1>
+  
+ <div class="profile-products-container">
+<h1 class="profile-products-heading">View Your Listed Products</h1>
+     <div class="profile-products">
     {{#each allProductsFromDB}}
-      <p>{{this.name}}</p>
-      <img src="{{this.image}}" alt="">
-      <p>{{this.description}}</p>
-      <p>{{this.allergens}}</p>
-      <a href="/product/edit?product_id={{this._id}}"><button>Edit</button></a>
-      <a href="/product/delete?product_id={{this._id}}"><button>Delete</button></a>
+    <div class="item">
+      
+      <img class="product-image" src="{{this.image}}">
+      <h3>{{this.name}}</h3>
+      <span>{{this.description}}</span>
+      <span>Allergens: {{this.allergens}}</span>
+      <div class="profile-button-container">
+        <a class="profile-button edit-button" href="/product/edit?product_id={{this._id}}">Edit</a>
+        <a class="profile-button delete-button" href="/product/delete?product_id={{this._id}}">Delete</a>
+      </div>
+      
+    </div>
+      
     {{/each}}
   </div>
+ </div>
+    
 </section>
 
 
