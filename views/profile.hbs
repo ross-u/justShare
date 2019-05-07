@@ -14,8 +14,7 @@
   <p>{{this.name}}</p>
   <p>{{this.description}}</p>
   <p>{{this.allergens}}</p>
-  <a href="products/edit"><button>Edit</button></a>
-  <a href="products/delete"><button>Delete</button></a>
+  <p>{{this._id}}</p>
+  <a href="/product/edit?product_id={{this._id}}"><button>Edit</button></a>
+  <a href="/product/delete?product_id={{this._id}}"><button>Delete</button></a>
 {{/each}}
-
-
