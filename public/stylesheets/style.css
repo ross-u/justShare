@@ -168,9 +168,10 @@ main {
 
 .signup-page {
   height: 93vh;
-  background: pink;
-  padding-top: 20px;
-  background: url('../images/markus-spiske-139525-unsplash.jpg') center / cover no-repeat ;
+  background: linear-gradient(rgba(22, 22, 22, 0.5), rgba(66, 66, 66, 0.5)),url('../images/markus-spiske-139525-unsplash.jpg') center / cover no-repeat ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-container {
@@ -178,11 +179,10 @@ main {
   padding: 15px 30px 30px 30px;
   color: white;
   width: 65vw;
+  height: 500px;
   max-width: 600px;
-  margin: 50px auto 0;
   border: 3px solid rgb(5, 223, 197);
-  /* background: rgb(82, 37, 104);   */
-  background: rgba(110, 173, 165, 0.864);
+  background: rgba(5, 223, 197, .9); 
 }
 
 form {
@@ -201,7 +201,6 @@ form input {
 form button {
   height: 30px;
   border-radius: 15px;
-  /* margin-top: -30px; */
 }
 
 form p {

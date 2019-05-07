@@ -2,10 +2,12 @@ const mongoose = require(‘mongoose’);
 const Schema = mongoose.Schema;
 
 const productSchema = new Schema({
- name: String,
- description: String,
- allergens: String,
- pickup-time: String,
+  name: String,
+  description: String,
+  allergens: String,
+  time: String,
+  user: Schema.Types.ObjectId,
+  image: String
 }, {
  timestamps: {
    createdAt: ‘created_at’,

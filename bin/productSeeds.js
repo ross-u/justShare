@@ -111,3 +111,11 @@ const shop = [
   }
 
 ];
+<<<<<<< HEAD
+=======
+Product.create(shop, (err) => {
+  if (err) { throw (err); }
+  console.log(`Created ${shop.length} shop`);
+  mongoose.connection.close();
+});
+>>>>>>> ad0b2dc501816607c736a20ca142dd940583f306

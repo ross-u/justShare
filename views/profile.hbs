@@ -1,0 +1,21 @@
+<h1>PROFILE: {{user.username}}</h1>
+
+<h2>List all your products</h2>
+
+<br>
+
+
+
+<a href="/logout"><button>Logout</button></a>
+<a href="/product/new"><button>List new product</button></a>
+
+<h1>Listed Products</h1>
+{{#each allProductsFromDB}}
+  <p>{{this.name}}</p>
+  <img src="{{this.image}}" alt="">
+  <p>{{this.description}}</p>
+  <p>{{this.allergens}}</p>
+  <p>{{this._id}}</p>
+  <a href="/product/edit?product_id={{this._id}}"><button>Edit</button></a>
+  <a href="/product/delete?product_id={{this._id}}"><button>Delete</button></a>
+{{/each}}
