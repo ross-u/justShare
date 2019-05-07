@@ -144,11 +144,7 @@ form p {
   margin-top: 30px;
 }
 
-<<<<<<< HEAD
 /*********************** LOGIN ************************/
-=======
-/************* SHOW PRODUCTS **************/
->>>>>>> b6684c60e85141c48fa1bfbbf5ece510f90a3750
 
 .showProducts{
   background:linear-gradient(rgba(2, 2, 0, 0.5), rgba(15, 19, 0, 0.401)), url('../images/bread.jpg') center / cover no-repeat;

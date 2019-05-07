@@ -28,11 +28,6 @@ router.get('/profile', checkIfAuthenticated, (req, res, next) => {
 
   Product.find({ user: req.user._id })
     .then((allProductsFromDB) => {
-<<<<<<< HEAD
-=======
-      console.log('allProductsFromDB', allProductsFromDB);
-
->>>>>>> Ivybranch
       res.render('profile', { user: req.user, allProductsFromDB });
     })
     .catch((err) => console.log('error', err));
