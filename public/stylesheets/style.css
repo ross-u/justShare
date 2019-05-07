@@ -42,6 +42,11 @@ nav {
   color: white;
   font-family: 'Pacifico', cursive;
   font-size: 1.5rem;
+  text-decoration: none;
+}
+
+#nav-brand-container a {
+  text-decoration: none;
 }
 
 #nav-links {
@@ -170,88 +175,9 @@ form p {
   align-items: center;
 }
 
-
-
 .login-page .form-container {
   height: 225px;
 }
-
-/* .showProducts{
-  background:linear-gradient(rgba(2, 2, 0, 0.5), rgba(15, 19, 0, 0.401)), url('../images/bread.jpg') center / cover no-repeat;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-items: center;
-}
-@media (min-width: 900px) {
-  .showProducts{
-    height: 100vh;
-  }
-}
-.content{
-  background-color: rgb(245,245,245,0.8);
-  width: 90%;
-  height: 90%;
-  margin: 40px;
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-  z-index: 1; 
-  border-radius: 2%; 
-}
-h2 {
-  color: rgb(49, 40, 40);
-  border-bottom: 2px solid  rgb(49, 40, 40);
-  width: 280px;
-  font-size: 25px;
-  position: relative;
-  top:10px;
-  margin-bottom: 10px;
-}
-.display{
-  width:100%;
-  height: 100%;
-  margin-top: 10px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.display figure {
-	margin:15px 10px;
-  width: 250px;
-  height: 250px;
-	text-align: center;
-}
-
-.display figure img{
-	border: 1px solid white;
-  width: 200px;
-  height: 150px;
-	box-shadow:gray 5px 5px 10px;
-  border-radius: 10%;
-  margin-bottom: 5px;
-} 
-
-.display figcaption {
-  margin: 5px;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  padding-left: 25px;
-  color: rgb(49, 40, 40);
-}
-.display p{
-  margin: 5px 5px 5px 0px;
-}
-.showProducts .button-container{
-  margin-bottom: 10px;
-} */
 
 /******************* ADD NEW ITEM ********************/
 
@@ -358,7 +284,7 @@ h2 {
 
 .profile-button {
   padding: 15px 0;
-  width: 120px;
+  width: 45%;
   color: white;
   text-decoration: none;
   text-align: center;
@@ -416,17 +342,113 @@ h2 {
     align-items: center;
     width: 100vw;
   }
+
+  .item {
+    width: 90%; 
+  }
   
+  .product-image {
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+  }
 }
 
 
 
 
 @media(min-width:768px){
+  #nav-brand {
+    font-size: 1rem;
+  }
+  
+  #nav-links {
+    font-size: 1rem;
+  }
 
+  .main-header {
+    font-size: 6rem;
+  }
+
+  .main-content {
+    margin-top: 225px;
+  }
+
+  main .button-container {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  div.item {
+    width: 45%; 
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+  }
 }
 
 @media(min-width:992px){
+  #nav-brand {
+    font-size: 1.75rem;
+  }
+  
+  #nav-links a {
+    padding-left: 30px;
+    font-size: 1.25rem;
+  }
+
+  .main-header {
+    font-size: 5rem;
+  }
+
+  .button {
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+    width: 175px;
+  }
+
+  .main-content {
+    margin-top: 225px;
+  }
+
+  main .button-container {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  div.item {
+    width: 45%; 
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  .signup-page .form-container {
+    width: 65vw;
+    height: 570px;
+   }
+
+   .login-page .form-container {
+    width: 65vw;
+    height: 280px;
+   }
+
+   form input {
+    height: 40px;
+  }
+
+  .new-button {
+    width: 200px;
+  }
 
 }
 
