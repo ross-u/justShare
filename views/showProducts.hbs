@@ -1,7 +1,90 @@
-<h2>All Products</h2>
-{{#each allProductsFromDB}}
+<section class='showProducts'>
+	<div class='content'>
+  <h2>PRODUCTS OF THE DAY</h2>
+		<div class='display'>
+	    <figure>
+		    <img src="../images/croissant.jpeg" alt="crossiant">
+	 	    <figcaption>Fresh Bake Croissant <br>
+				<p>Allegy:egg, milk, gluten<br>
+				   Location: poblenou<br>
+				   Pick up: 10pm</p><br>
+				</figcaption>
+		  </figure>
+		  <figure>
+			  <img src="../images/bananas.jpg" alt="bananas">
+			   <figcaption> Bananas for Today<br>
+				 <p>Allegy:none<br>
+				   Location: poblenou<br>
+				   Pick up: 5pm</p><br>
+				</figcaption>
+	    </figure>
+      <figure>
+			  <img src="../images/burger.jpg" alt="burger">
+			   <figcaption> Hamburger<br>
+				 <p>Allegy:egg, milk, gluten, meat<br>
+				   Location: poblenou<br>
+				   Pick up: 12pm</p><br>
+				</figcaption>
+		  </figure>
+			<figure>
+		    <img src="../images/fruit.png" alt="fruit">
+	 	     <figcaption>Fruit for Today <br>
+				 <p>Allegy:none<br>
+				   Location: Gracia<br>
+				   Pick up: 2pm</p><br>
+				</figcaption>
+		  </figure>
+			<figure>
+		    <img src="../images/Broccoli.jpg" alt="broccoli">
+	 	     <figcaption>Broccoli for Today<br>
+				 <p>Allegy:none<br>
+				   Location: El Bone<br>
+				   Pick up: 8pm</p><br>
+				</figcaption>
+		  </figure>
+			<figure>
+		    <img src="../images/pizza.jpeg" alt="pizza">
+	 	     <figcaption>Pizza<br>
+				 <p>Allegy:egg, milk, gluten<br>
+				   Location: poblenou<br>
+				   Pick up: 12pm</p><br>
+				</figcaption>
+		  </figure>
+			<figure>
+		    <img src="images/oranges.jpg" alt="oranges">
+	 	     <figcaption>Oranges<br>
+				<p>Allegy:none<br>
+				   Location: Poblenou<br>
+				   Pick up: 10pm</p><br>
+				</figcaption>
+		  </figure>
+			<figure>
+		    <img src="images/potato.jpg" alt="potato">
+	 	     <figcaption>Potato for Today<br>
+				<p>Allegy: none<br>
+				   Location: Vila Olimpica<br>
+				   Pick up: 10pm</p><br>
+				</figcaption>
+		  </figure>
+			<figure>
+		    <img src="images/tomato.jpg" alt="tomato">
+	 	     <figcaption>Tomato for Today<br>
+				<p>Allegy: none<br>
+				   Location: Poblenou<br>
+				   Pick up: 10pm</p><br>
+				</figcaption>
+		  </figure>	
+		</div>
+		 <div class="button-container">
+      <a class="button signup-button" href="/product/new">Add +</a>
+      <a class="button login-button" href="/product">Delete</a>
+    </div>
+	</div>
+</section>
+
+{{!-- {{#each allProductsFromDB}}
   <h2>{{this.name}}</h2>
   <h3>{{this.description}}</h3>
   <p>Allegens: {{this.allergens}}</p>
   <p>Location: {{this.location}}</p>
-{{/each}}
+{{/each}} --}}
