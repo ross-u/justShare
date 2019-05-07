@@ -2,18 +2,18 @@
 
 <section class="login-page">
   <section class="form-container">
-<h2>Login</h2>
+    <h2>Login</h2>
 
 <form action="/login" method="POST">
   <input type="text" name="username" placeholder="username">
   <input type="password" name="password" placeholder="Password">
 
-  {{#if message}}
-    <div class="error-message">{{ message }}</div>
-  {{/if}}
+      {{#if message}}
+        <div class="error-message">{{ message }}</div>
+      {{/if}}
 
-  <button id="signup-button">Login!</button>
+      <button id="signup-button">Login!</button>
 
-</form>
+    </form>
   </section>
 </section>
