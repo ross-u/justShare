@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const passport = require('passport');
-const Product = require('./../models/productModel')
+const Product = require('./../models/productModel');
 
 // Custom middleware to check if user is logged in
 const checkIfAuthenticated = (req, res, next) => {
@@ -26,8 +26,13 @@ router.get('/logout', (req, res) => {
 router.get('/profile', checkIfAuthenticated, (req, res, next) => {
   console.log('profile req.user._id', req.user._id);
 
-  Product.find({user: req.user._id })
+  Product.find({ user: req.user._id })
     .then((allProductsFromDB) => {
+<<<<<<< HEAD
+=======
+      console.log('allProductsFromDB', allProductsFromDB);
+
+>>>>>>> Ivybranch
       res.render('profile', { user: req.user, allProductsFromDB });
     })
     .catch((err) => console.log('error', err));
@@ -35,7 +40,7 @@ router.get('/profile', checkIfAuthenticated, (req, res, next) => {
 
 // GET  '/login'
 router.get('/login', (req, res, next) => {
-  res.render('passport/login', { 'message': req.flash('error') } );
+  res.render('passport/login', { 'message': req.flash('error') });
 });
 
 // POST  '/login'
