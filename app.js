@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require('mongoose');
 const config = require('./config/config');
+const dotenv = require('dotenv').config();
 
 // Session and Passport modules
 const session = require('express-session');
@@ -14,7 +15,7 @@ const passportStrategySetup = require('./config/passport-local-strategy');
 
 const router = require('./routes/index');
 
-mongoose.connect(`mongodb://localhost/${config.DB_NAME}`, { useNewUrlParser: true })
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
   .then(() => console.log('Connected to Mongo!'))
   .catch(err => console.error('Error connecting to mongo', err));
 
