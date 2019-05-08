@@ -313,7 +313,7 @@ form p {
   height: 425px;
 }
 
-/********************* MEDIA QUERIES **********************/
+/************ EXTRA SMALL MEDIA QUERIES *************/
 
 @media(max-width:767px){
   #nav-brand {
@@ -355,7 +355,7 @@ form p {
 }
 
 
-
+/************ MEDIUM MEDIA QUERIES *************/
 
 @media(min-width:768px){
   #nav-brand {
@@ -390,6 +390,8 @@ form p {
     margin: 0 auto;
   }
 }
+
+/************ LARGE MEDIA QUERIES *************/
 
 @media(min-width:992px){
   #nav-brand {
@@ -451,6 +453,8 @@ form p {
   }
 
 }
+
+/************ EXTRA LARGE MEDIA QUERIES *************/
 
 @media(min-width:1200px){
 

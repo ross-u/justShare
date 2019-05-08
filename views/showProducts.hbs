@@ -1,4 +1,4 @@
-<section class='showProducts'>
+{{!-- <section class='showProducts'>
 	<div class='content'>
   <h2>PRODUCTS OF THE DAY</h2>
 		<div class='display'>
@@ -80,11 +80,25 @@
       <a class="button login-button" href="/product">Delete</a>
     </div>
 	</div>
-</section>
+</section> --}}
 
-{{!-- {{#each allProductsFromDB}}
-  <h2>{{this.name}}</h2>
-  <h3>{{this.description}}</h3>
-  <p>Allegens: {{this.allergens}}</p>
-  <p>Location: {{this.location}}</p>
-{{/each}} --}}
+<div class="profile-products-container">
+<h1 class="profile-products-heading">View Available Products</h1>
+     <div class="profile-products">
+    {{#each allProductsFromDB}}
+    <div class="item">
+      
+      <img class="product-image" src="{{this.image}}">
+      <h3>{{this.name}}</h3>
+      <span>{{this.description}}</span>
+      <span>Allergens: {{this.allergens}}</span>
+      <div class="profile-button-container">
+        <a class="profile-button edit-button" href="/product/edit?product_id={{this._id}}">Edit</a>
+        <a class="profile-button delete-button" href="/product/delete?product_id={{this._id}}">Delete</a>
+      </div>
+      
+    </div>
+      
+    {{/each}}
+  </div>
+ </div>
