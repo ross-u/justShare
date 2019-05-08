@@ -15,12 +15,12 @@ router.get('/new', (req, res, next) => {
 
 router.post('/new', parser.single('image'), (req, res, next) => {
   const { name, description, allergens, location, image } = req.body;
-  const user = mongoose.mongo.ObjectId(req.user.Id);
+  const user = mongoose.Types.ObjectId(req.user.Id);
   console.log('user', user);
   const newProduct = new Product({ name, description, allergens, location, image, user });
   newProduct.save()
     .then(product => res.redirect('/profile'))
-    .catch(error => res.redirect('/new'));
+    .catch(() => res.redirect('/new'));
 });
 
 // Edit product
@@ -50,9 +50,11 @@ router.get('/delete', (req, res, next) => {
 
 router.get('/', (req, res, next) => {
   Product.find()
-    .populate('user')    
-    .then((allProductsFromDB) => {console.log(allProductsFromDB) 
-      res.render('showProducts', { allProductsFromDB }) })
+    .populate('User')
+    .then((allProductsFromDB) => {
+      console.log(allProductsFromDB)
+      res.render('showProducts', { allProductsFromDB })
+    })
       .catch((error) => console.log(error));
           // .exec((err, data) => {
           //   if(err) console.log('error', err);
