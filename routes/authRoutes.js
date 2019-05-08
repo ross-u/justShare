@@ -28,37 +28,10 @@ router.get('/profile', checkIfAuthenticated, (req, res, next) => {
 
   Product.find({user: req.user._id })
     .then((allProductsFromDB) => {
-      console.log('allProductsFromDB', allProductsFromDB);
-  
       res.render('profile', { user: req.user, allProductsFromDB });
     })
     .catch((err) => console.log('error', err));
 });
-
-// router.get('/profile', checkIfAuthenticated, (req, res, next) => {
-//   res.render('profile', { user: req.user });
-//   const {id} = req.params;
-//   Product.find({user: id})
-//     .then(products => res.send(products))
-//     .catch(err => console.log(err))
-
-// router.get(‘/details/:bookId’, (req, res, next) => {
-//  console.log(req.params);
-//  const {bookId} = req.params;
-//  Book.findById(bookId)
-//    // the author object with the ID with be pulled from the DB
-//    .populate(‘author’)
-//    .then(book => res.render(‘book-details’, {book}))
-//    .catch(error => console.log(error));
-// })
-
-/* GET /books */
-// router.get('/', (req, res, next) => {
-//  Book.find({})
-//    // pass the data to our books file in the form of an object!
-//    .then((allTheBooksFromDB) => res.render(‘books’, {allTheBooksFromDB}))
-//    .catch((error) => {console.log(error)});
-// })
 
 // GET  '/login'
 router.get('/login', (req, res, next) => {
@@ -79,7 +52,7 @@ router.get('/signup', (req, res, next) => {
 
 // POST  '/signup'
 router.post('/signup', (req, res, next) => {
-  const { username, password } = req.body;
+  const { username, password, email, restaurant, neighborhood } = req.body;
 
   if (username === '' || password === '') {
     res.render('passport/signup', { message: 'Indicate username and password' });
@@ -96,11 +69,19 @@ router.post('/signup', (req, res, next) => {
       const salt = bcrypt.genSaltSync(bcryptSalt);
       const hashPass = bcrypt.hashSync(password, salt);
 
-      const newUser = new User({ username, password: hashPass });
+      // const location = {
+      //   type: 'Point',
+      //   cordinates: [41.3975248, 2.1910079]
+      //  }
 
+      const newUser = new User({ username, password: hashPass, email, restaurant, neighborhood });
+      console.log(newUser);
       newUser.save((err) => {
-        if (err) res.render('passport/signup', { message: 'Something went wrong' });
-        else res.redirect('/');
+        if (err) {
+          console.log('DB ERROR', err)
+          res.render('passport/signup', { message: 'Something went wrong' });
+        }
+        else res.redirect('/profile');
       });
     })
     .catch(error => next(error));

@@ -1,12 +1,15 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const ObjectId = Schema.Types.ObjectId;
+const User = require('./user');
 
 const productSchema = new Schema({
   name: String,
+  image: String,
   description: String,
   allergens: String,
   time: String,
-  user: Schema.Types.ObjectId
+  user: { type: Schema.Types.ObjectId, ref: 'User' }
 }, {
   timestamps: {
     createdAt: 'created_at',

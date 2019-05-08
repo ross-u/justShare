@@ -1,37 +1,26 @@
-<h1>{{user.username}}</h1>
+<section class="profile-page">
+  <div class="profile-info">
+    <h1>Welcome, {{user.username}}!</h1>
+    <a class="new-button button" href="/product/new">Add New Product</a>
+  </div>
+  
+  <div class="profile-products">
+    <h1>View Your Listed Products</h1>
+    {{#each allProductsFromDB}}
+      <p>{{this.name}}</p>
+      <img src="{{this.image}}" alt="">
+      <p>{{this.description}}</p>
+      <p>{{this.allergens}}</p>
+      <a href="/product/edit?product_id={{this._id}}"><button>Edit</button></a>
+      <a href="/product/delete?product_id={{this._id}}"><button>Delete</button></a>
+    {{/each}}
+  </div>
+  
 
-<h4>List all your products</h4>
+</section>
 
-<br>
 
-<div>
-  {{#if user}}
-  <h3>user.req :</h3>
-    <p>{{user}}</p>
-  {{/if}}
-</div>
 
-<a href="/">
-  <button>Home</button>
-</a>
 
-<a href="/logout">
-  <button>Logout</button>
-</a>
-
-<a href="/product/new">
-<button>List new product</button>
-</a>
-
-<h1>Listed Products</h1>
-{{#each allProductsFromDB}}
-  <p><a href="/products/{{this.id}}">{{this.name}}</a></p>
-  <a href="products/edit">
-<button>Edit Product</button>
-</a>
-<a href="products/delete">
-<button>Delete product</button>
-</a>
-{{/each}}
 
 
