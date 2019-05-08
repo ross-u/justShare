@@ -4,12 +4,17 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
   username: String,
   password: String,
+  email: String,
   restaurant: String,
+  address: {
+    street: String,
+    number: String,
+    city: String
+  },
+  neighborhood: String,
   location: {
-    type: {
-      type: String
-    },
-    coordinates: [Number]
+    type: String,
+    coordinates: [Schema.Types.Decimal128]
   }
 }, {
   timestamps: { 

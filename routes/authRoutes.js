@@ -52,7 +52,7 @@ router.get('/signup', (req, res, next) => {
 
 // POST  '/signup'
 router.post('/signup', (req, res, next) => {
-  const { username, password } = req.body;
+  const { username, password, email, restaurant, neighborhood } = req.body;
 
   if (username === '' || password === '') {
     res.render('passport/signup', { message: 'Indicate username and password' });
@@ -69,11 +69,19 @@ router.post('/signup', (req, res, next) => {
       const salt = bcrypt.genSaltSync(bcryptSalt);
       const hashPass = bcrypt.hashSync(password, salt);
 
-      const newUser = new User({ username, password: hashPass });
+      // const location = {
+      //   type: 'Point',
+      //   cordinates: [41.3975248, 2.1910079]
+      //  }
 
+      const newUser = new User({ username, password: hashPass, email, restaurant, neighborhood });
+      console.log(newUser);
       newUser.save((err) => {
-        if (err) res.render('passport/signup', { message: 'Something went wrong' });
-        else res.redirect('/');
+        if (err) {
+          console.log('DB ERROR', err)
+          res.render('passport/signup', { message: 'Something went wrong' });
+        }
+        else res.redirect('/profile');
       });
     })
     .catch(error => next(error));

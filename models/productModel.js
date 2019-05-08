@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const ObjectId = Schema.Types.ObjectId;
+const User = require('./user');
 
 const productSchema = new Schema({
   name: String,
@@ -7,8 +9,7 @@ const productSchema = new Schema({
   description: String,
   allergens: String,
   time: String,
-  user: Schema.Types.ObjectId,
-  image: String
+  user: { type: Schema.Types.ObjectId, ref: 'User' }
 }, {
   timestamps: {
     createdAt: 'created_at',

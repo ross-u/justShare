@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Provider = require('../models/providerModel');
+const Provider = require('../models/user');
 
 const dbName = 'providerData';
 mongoose.connect(`mongodb://localhost/${dbName}`);
@@ -30,7 +30,11 @@ const shop = [
     password: 'skye-coffee'
   },
   { establishmentName: 'Sonora Sport Tavern',
-    address: {
+    location: {
+      type: 'Point',
+      coordinates: [41.3975248, 2.1910079],
+    }
+      address: {
       street: 'Career de Pamplona, 96',
       city: 'Barcelona',
       neighborhood: 'Poblenou'
